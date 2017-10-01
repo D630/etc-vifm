@@ -1,0 +1,469 @@
+" vim: filetype=vifm :
+
+""aproposprg
+set autochpos
+""columns
+""cdpath
+set classify=:link:@
+set confirm
+set cpoptions-=fst
+set dotdirs=
+set fastrun
+set fillchars=
+set findprg="find %s %a −print , −type d \( ! −readable −o ! −executable \) −prune"
+set nofollowlinks
+set fusehome="$XDG_CACHE_HOME/vifm_FUSE/"
+set nogdefault
+set grepprg="grep −n −H %i %a %s"
+set history=0
+set hlsearch hls
+set noiec
+set ignorecase
+set incsearch
+set laststatus
+""lines
+set locateprg=locate\ -e\ %a
+set nolsview
+set nonumber
+set numberwidth=4
+set norelativenumber
+set rulerformat=
+set norunexec
+set noscrollbind
+set scrolloff=4
+""shell sh
+set shortmess=T
+set slowfs=
+set smartcase
+set sort=name,-size,type
+set sortnumbers
+set statusline=%A\ %u\ %g\ %s%d%=%2l/%S[+%0-]
+set sortorder=ascending
+set nosyscalls
+set tabstop=4
+set timefmt=%Y-%m-%d\ %H:%M
+set timeoutlen=1000
+set trash
+set trashdir="%r/.vifm−Trash,$HOME/.vifm/Trash"
+set tuioptions=p
+set tuioptions-=s
+set undolevels=1000
+set vicmd="vim -p"
+set viewcolumns=-{name}..,3{mode}
+""vixcmd
+set vifminfo=
+set vimhelp
+set wildmenu
+set nowrap
+set wrapscan
+
+""colorscheme solarized-dark
+
+highlight clear
+
+highlight BrokenLink      cterm=none ctermfg=160 ctermbg=235
+highlight Device          cterm=bold ctermfg=244 ctermbg=230
+highlight Directory       cterm=none ctermfg=33 ctermbg=default
+highlight Executable      cterm=none ctermfg=64 ctermbg=default
+highlight Fifo            cterm=bold ctermfg=136 ctermbg=230
+highlight Link            cterm=none ctermfg=37 ctermbg=default
+highlight Socket          cterm=bold ctermfg=136 ctermbg=230
+
+highlight Border          cterm=none ctermfg=default ctermbg=default
+highlight CmdLine         cterm=none ctermfg=10 ctermbg=default
+highlight CurrLine        cterm=none ctermfg=default ctermbg=0
+highlight ErrorMsg        cterm=reverse ctermfg=red ctermbg=default
+highlight OtherLine       cterm=none ctermfg=default ctermbg=0
+highlight Selected        cterm=none ctermfg=10 ctermbg=8
+highlight StatusLine      cterm=reverse ctermfg=14 ctermbg=0
+highlight TopLine         cterm=none ctermfg=14 ctermbg=default
+highlight TopLineSel      cterm=none ctermfg=yellow ctermbg=default
+highlight WildMenu        cterm=none ctermfg=7 ctermbg=0
+highlight Win             cterm=none ctermfg=default ctermbg=default
+
+" normal mode && visual mode
+""%
+""'
+"",
+"".
+""/
+"":
+"";
+""<c-I>
+""<c-O>
+""<c-X>
+""<c-b>
+""<c-c>
+""<c-d>
+""<c-f>
+""<c-g>
+""<c-i>
+""<c-l>
+""<c-n>
+""<c-o>
+""<c-p>
+""<c-r>
+""<c-u>
+""<c-w>=
+""<c-w>o
+""<c-w>s
+""<c-w>v
+""<c-w>w
+""<c-w>x
+""<c-w>|
+""<c-x>
+""<cr>
+""<esc>
+""<s-tab>
+""=
+""?
+""F
+""G
+""N
+""V
+""`
+
+""e
+""f
+""gg
+""h
+""i
+""j
+""k
+""l
+""m
+""n
+""t
+""u
+""v
+""zM
+""zO
+""zR
+""za
+""zf
+""zm
+""zo
+
+" visual mode
+""<c-G>
+""O
+""av
+""gv
+""o
+
+" view mode
+""<c-w>=
+""<c-w>s
+""<c-w>v
+""<c-w>w
+""<c-w>x
+""<c-w>|
+""<s-tab>
+""<tab>
+""q
+""<cr>
+
+" commandline mode
+""c-a
+""c-b
+""c-c
+""c-d
+""c-e
+""c-f
+""c-g
+""c-h
+""c-i
+""c-k
+""<cr>
+""c-n
+""c-p
+""c-t
+""c-u
+""c-w
+""c-x =
+""c-x a
+""c-x c
+""c-x d
+""c-x e
+""c-x m
+""c-x r
+""c-x t
+""<esc><esc>
+""<m-.>
+""<s-tab>
+""<m-b>
+""<m-d>
+""<m-f>
+""<c-_>
+""<s-tab>
+""<bs>
+
+"" Menus and dialogs
+""c-b
+""c-c
+""c-d
+""c-e
+""c-f
+""c-l
+""<cr>
+""c-n
+""c-p
+""c-u
+""c-y
+""<esc>
+""/
+"":
+""?
+""G
+""H
+""L
+""M
+""N
+""ZQ
+""ZZ
+""dd
+""gf
+""gg
+""j
+""k
+""l
+""n
+""q
+""zH
+""zL
+""zb
+""zh
+""zl
+""zt
+""zz
+""z<left>
+""z<right>
+""<down>
+""<up>
+""<right>
+""<home>
+""<pagedown>
+""<pageup>
+""<end>
+
+" unmapping
+cmap <del> <nop>
+cmap <delete> <nop>
+cmap <down> <nop>
+cmap <end> <nop>
+cmap <home> <nop>
+cmap <left> <nop>
+cmap <right> <nop>
+cmap <up> <nop>
+map !! <nop>
+map $ <nop>
+map ( <nop>
+map ) <nop>
+map 0 <nop>
+map <c-A> <nop>
+map <c-a> <nop>
+map <c-e> <nop>
+map <c-w>+ <nop>
+map <c-w>- <nop>
+map <c-w>< <nop>
+map <c-w><c-b> <nop>
+map <c-w><c-h> <nop>
+map <c-w><c-i> <nop>
+map <c-w><c-j> <nop>
+map <c-w><c-k> <nop>
+map <c-w><c-l> <nop>
+map <c-w><c-o> <nop>
+map <c-w><c-p> <nop>
+map <c-w><c-s> <nop>
+map <c-w><c-t> <nop>
+map <c-w><c-v> <nop>
+map <c-w><c-w> <nop>
+map <c-w><c-x> <nop>
+map <c-w><c-z> <nop>
+map <c-w>> <nop>
+map <c-w>H <nop>
+map <c-w>J <nop>
+map <c-w>K <nop>
+map <c-w>L <nop>
+map <c-w>_ <nop>
+map <c-w>b <nop>
+map <c-w>h <nop>
+map <c-w>j <nop>
+map <c-w>k <nop>
+map <c-w>l <nop>
+map <c-w>p <nop>
+map <c-w>t <nop>
+map <c-w>z <nop>
+map <c-y> <nop>
+map <down> <nop>
+map <end> <nop>
+map <home> <nop>
+map <left> <nop>
+map <pagedown> <nop>
+map <pageup> <nop>
+map <right> <nop>
+map <space> <nop>
+map <up> <nop>
+map C <nop>
+map DD <nop>
+map H <nop>
+map L <nop>
+map M <nop>
+map P <nop>
+map Y <nop>
+map ZQ <nop>
+map ZZ <nop>
+map ^ <nop>
+map al <nop>
+map cW <nop>
+map cg <nop>
+map cl <nop>
+map co <nop>
+map cp <nop>
+map cw <nop>
+map dd <nop>
+map gA <nop>
+map gU <nop>
+map gUU <nop>
+map gUgU <nop>
+map gUgg <nop>
+map ga <nop>
+map gf <nop>
+map gh <nop>
+map gj <nop>
+map gk <nop>
+map gl <nop>
+map gs <nop>
+map gu <nop>
+map gugg <nop>
+map gugu <nop>
+map guu <nop>
+map p <nop>
+map q/ <nop>
+map q: <nop>
+map q= <nop>
+map q? <nop>
+map rl <nop>
+map yy <nop>
+map zb <nop>
+map zt <nop>
+map zz <nop>
+nmap <c-G> <nop>
+nmap av <nop>
+nmap gv <nop>
+qmap % <nop>
+qmap / <nop>
+qmap < <nop>
+qmap <c->w+ <nop>
+qmap <c->w- <nop>
+qmap <c-b> <nop>
+qmap <c-d> <nop>
+qmap <c-e> <nop>
+qmap <c-f> <nop>
+qmap <c-i> <nop>
+qmap <c-k> <nop>
+qmap <c-l> <nop>
+qmap <c-n> <nop>
+qmap <c-p> <nop>
+qmap <c-r> <nop>
+qmap <c-u> <nop>
+qmap <c-v> <nop>
+qmap <c-w>< <nop>
+qmap <c-w><c-h> <nop>
+qmap <c-w><c-i> <nop>
+qmap <c-w><c-k> <nop>
+qmap <c-w><c-l> <nop>
+qmap <c-w><c-o> <nop>
+qmap <c-w><c-p> <nop>
+qmap <c-w><c-s> <nop>
+qmap <c-w><c-t> <nop>
+qmap <c-w><c-v> <nop>
+qmap <c-w><c-w> <nop>
+qmap <c-w><c-x> <nop>
+qmap <c-w><c-z> <nop>
+qmap <c-w>> <nop>
+qmap <c-w>H <nop>
+qmap <c-w>J <nop>
+qmap <c-w>K <nop>
+qmap <c-w>L <nop>
+qmap <c-w>_ <nop>
+qmap <c-w>b <nop>
+qmap <c-w>h <nop>
+qmap <c-w>j <nop>
+qmap <c-w>k <nop>
+qmap <c-w>l <nop>
+qmap <c-w>o <nop>
+qmap <c-w>p <nop>
+qmap <c-w>t <nop>
+qmap <c-w>z <nop>
+qmap <c-y> <nop>
+qmap <down> <nop>
+qmap <end> <nop>
+qmap <home> <nop>
+qmap <m- > <nop>
+qmap <m-<> <nop>
+qmap <m->> <nop>
+qmap <m-v> <nop>
+qmap <pagedown> <nop>
+qmap <pageup> <nop>
+qmap <space> <nop>
+qmap <up> <nop>
+qmap > <nop>
+qmap ? <nop>
+qmap G <nop>
+qmap N <nop>
+qmap Q <nop>
+qmap R <nop>
+qmap ZQ <nop>
+qmap ZZ <nop>
+qmap b <nop>
+qmap d <nop>
+qmap e <nop>
+qmap f <nop>
+qmap g <nop>
+qmap j <nop>
+qmap k <nop>
+qmap n <nop>
+qmap p <nop>
+qmap r <nop>
+qmap u <nop>
+qmap v <nop>
+qmap w <nop>
+qmap y <nop>
+qmap z <nop>
+vmap U <nop>
+vmap u <nop>
+
+mark L /var/log
+mark M /mnt
+mark b ~/bin
+mark d /dev
+mark e /etc
+mark h ~/
+mark l /usr/lib
+mark m /media
+mark o /opt
+mark r /
+mark s /srv
+mark u /usr
+mark v /var
+
+nnoremap ,,w :set wrap!<cr>
+nnoremap ,c :write | execute ':!%nvim $MYVIFMRC' | restart<cr>
+nnoremap ,p :!less %f<cr>
+nnoremap ,s :shell<cr>
+nnoremap ,S :sort<cr>
+nnoremap ,t :!st &<cr>
+nnoremap ,w :view<cr>
+nnoremap ,yb :!echo \'%c\' | xclip %i<cr>
+nnoremap ,yd :!echo -n \'%d\' | xclip %i<cr>
+nnoremap ,yf :!echo -n \'%c:p\' | xclip %i<cr>
+nnoremap ,yr :!echo -n \'%c:r\' | xclip %i<cr>
+noremap ,l :set viewcolumns=-{name}..,3{mode}<cr>
+noremap ,ll :set viewcolumns=-{name}..,10{perms},12{uname},-7{gname},10{size}.,20{mtime}<cr>
+vnoremap ,w :view<cr>gv
+nnoremap ,f :fileviewer * less %c<cr> | restart<cr>
+
+windo set viewcolumns=-{name}..,3{mode}.
+windo normal! zo
+view
